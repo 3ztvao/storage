@@ -1,8 +1,10 @@
 import os,pymysql
+from PyQt5 import uic,QtWidgets
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-def login(username_input, password_input):
+#Funçã para puxar no mysql
+def login(username,password):
     try:
         conexao = pymysql.connect(
             host='localhost',
@@ -15,17 +17,18 @@ def login(username_input, password_input):
         cursor = conexao.cursor()
 
         consulta_sql = "SELECT * FROM usuarios WHERE login = %s AND senha = %s "
-        cursor.execute(consulta_sql, (username_input, password_input))
+        cursor.execute(consulta_sql, (username, password))
 
         usuario = cursor.fetchone()
 
         if usuario:
             nome_usuario= usuario[1]
             print(f"Bem-vindo, {nome_usuario}!")
+            janela2.show()
             return True
         else:
             print("Nome de usuário ou senha incorretos.")
-            return False
+            janela.error.setText("Nome de usuário ou senha incorretos.")
 
     except pymysql.MySQLError as e:
         print(f"Erro ao conectar ao MySQL: {e}")
@@ -35,8 +38,19 @@ def login(username_input, password_input):
             cursor.close()
             conexao.close()
             print("Conexão encerrada.")
-
-username = input("Digite o nome de usuário: ")
-password = input("Digite a senha: ")
-
-login(username, password) 
+#QtD
+def funcao_principal():
+    username=janela.user.text()
+    password=janela.senha.text()
+    login(username,password)
+    janela.user.setText("")
+    janela.senha.setText("")
+    
+        
+    
+app=QtWidgets.QApplication([])
+janela=uic.loadUi("janela.ui")
+janela2=uic.loadUi("janela2.ui")
+janela.pushButton.clicked.connect(funcao_principal)
+janela.show()
+app.exec()
