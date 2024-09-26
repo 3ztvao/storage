@@ -26,7 +26,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">
-background-color: rgb(209, 255, 174);
+
 background-color: rgb(134, 134, 134);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -170,6 +170,19 @@ color: rgb(0, 0, 0);</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>260</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cadastro</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
@@ -177,6 +190,7 @@ color: rgb(0, 0, 0);</string>
    <zorder>pushButton</zorder>
    <zorder>senha</zorder>
    <zorder>error</zorder>
+   <zorder>pushButton_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -187,18 +201,6 @@ color: rgb(0, 0, 0);</string>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuENTRAR">
-    <property name="title">
-     <string>ENTRAR</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuCADASTRO">
-    <property name="title">
-     <string>CADASTRO</string>
-    </property>
-   </widget>
-   <addaction name="menuENTRAR"/>
-   <addaction name="menuCADASTRO"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
