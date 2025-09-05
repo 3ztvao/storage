@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1081</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(134, 134, 134);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1081</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="produtosConsulta">
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>230</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="produtosInserir">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>INSERIR</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="clientesCadastro">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>250</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CADASTRP</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="produtosRetirar">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RETIRAR</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuUSUARIOS">
+    <property name="title">
+     <string>FUNCIONARIOS</string>
+    </property>
+    <addaction name="actionCADASTRO"/>
+   </widget>
+   <widget class="QMenu" name="menuPRODUTOS">
+    <property name="title">
+     <string>PRODUTOS </string>
+    </property>
+    <addaction name="actionCONSULTAR"/>
+    <addaction name="actionINSERIR"/>
+    <addaction name="actionRETIRAR"/>
+    <addaction name="actionCADASTROPRODUTO"/>
+   </widget>
+   <widget class="QMenu" name="menuCLIENTES">
+    <property name="title">
+     <string>CLIENTES </string>
+    </property>
+    <addaction name="actionCADASTRO_2"/>
+    <addaction name="actionDESCONTOS"/>
+   </widget>
+   <widget class="QMenu" name="menuCOMPRAS">
+    <property name="title">
+     <string>VENDAS</string>
+    </property>
+    <addaction name="actionDIARIAS"/>
+    <addaction name="actionMENSAL"/>
+    <addaction name="actionANUAL"/>
+   </widget>
+   <addaction name="menuUSUARIOS"/>
+   <addaction name="menuPRODUTOS"/>
+   <addaction name="menuCOMPRAS"/>
+   <addaction name="menuCLIENTES"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCONFERIR_PRE_O">
+   <property name="text">
+    <string>CONFERIR PREÇO</string>
+   </property>
+  </action>
+  <action name="actionPROMO_OES">
+   <property name="text">
+    <string>PROMOÇOES</string>
+   </property>
+  </action>
+  <action name="actionCADASTRAR">
+   <property name="text">
+    <string>CADASTRAR</string>
+   </property>
+  </action>
+  <action name="actionEDITAR">
+   <property name="text">
+    <string>EDITAR</string>
+   </property>
+  </action>
+  <action name="actionCADASTRO">
+   <property name="text">
+    <string>CADASTRO</string>
+   </property>
+  </action>
+  <action name="actionCONSULTAR">
+   <property name="text">
+    <string>CONSULTAR </string>
+   </property>
+  </action>
+  <action name="actionPROMO_ES">
+   <property name="text">
+    <string>PROMOÇÕES</string>
+   </property>
+  </action>
+  <action name="actionEDITAR_2">
+   <property name="text">
+    <string>EDITAR </string>
+   </property>
+  </action>
+  <action name="actionCADASTRO_2">
+   <property name="text">
+    <string>CADASTRO</string>
+   </property>
+  </action>
+  <action name="actionEDITAR_3">
+   <property name="text">
+    <string>EDITAR</string>
+   </property>
+  </action>
+  <action name="actionDESCONTOS">
+   <property name="text">
+    <string>DESCONTOS </string>
+   </property>
+  </action>
+  <action name="actionDIARIAS">
+   <property name="text">
+    <string>DIARIAS </string>
+   </property>
+  </action>
+  <action name="actionMENSAL">
+   <property name="text">
+    <string>MENSAL </string>
+   </property>
+  </action>
+  <action name="actionANUAL">
+   <property name="text">
+    <string>ANUAL </string>
+   </property>
+  </action>
+  <action name="actionINSERIR">
+   <property name="text">
+    <string>INESERIR </string>
+   </property>
+  </action>
+  <action name="actionRETIRAR">
+   <property name="text">
+    <string>RETIRAR</string>
+   </property>
+  </action>
+  <action name="actionCADASTROPRODUTO">
+   <property name="text">
+    <string>CADASTRO</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
